@@ -1,0 +1,75 @@
+@import "scss/settings";
+
+header {
+  width: 100%;
+  min-height: 5rem;
+  background-color: var(--primary);
+  @include flex(row, space-between, center, 0.5rem);
+  padding: 0 2rem;
+  color: var(--neutral);
+  .header-left a,
+  .header-right a,
+  .header-right button {
+    font-weight: bold;
+    @include transition(0.3s);
+    &:hover {
+      color: var(--secondary);
+    }
+  }
+  .header-left {
+    @include flex(row, space-between, center, 1rem);
+  }
+  #burger {
+    cursor: pointer;
+    @include flex(column, space-around, center, 0.5rem);
+    @include lg {
+      display: none;
+    }
+    width: 2.5rem;
+    height: 2.5rem;
+    @include transition(0.3s);
+    &:hover {
+      span {
+        background-color: var(--secondary);
+      }
+    }
+    span {
+      width: 100%;
+      height: 0.2rem;
+      background-color: var(--neutral);
+      @include transition(0.3s);
+      &:nth-child(2) {
+        width: 80%;
+      }
+    }
+  }
+  .header-right {
+    display: none;
+    @include lg {
+      @include flex(row, space-between, center, 0.5rem);
+    }
+
+    a,
+    button {
+      cursor: pointer;
+      font-size: 1.1rem;
+      border: 1px solid var(--secondary);
+      padding: 1rem 0.5rem;
+      color: var(--primary);
+      background-color: var(--secondary);
+      border-radius: 0.5rem;
+      &:hover {
+        background-color: var(--neutral);
+        color: var(--primary);
+      }
+      &.active {
+        background-color: var(--neutral);
+      }
+    }
+    button {
+      &:hover {
+        background-color: var(--warning);
+      }
+    }
+  }
+}

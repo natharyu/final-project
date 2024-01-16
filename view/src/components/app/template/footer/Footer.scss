@@ -1,0 +1,9 @@
+@import "scss/settings";
+
+footer {
+  width: 100%;
+  min-height: 5rem;
+  background-color: var(--primary);
+  @include flex(row, space-between, center, 0.5rem);
+  padding: 0 2rem;
+}

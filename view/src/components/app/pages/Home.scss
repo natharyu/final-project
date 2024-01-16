@@ -1,0 +1,13 @@
+@import "scss/settings";
+
+#home,
+#products,
+#category {
+  @include flex(column, normal, center, 2rem);
+  width: 100%;
+  section {
+    @include flex(row, center, center, 0.5rem);
+    min-height: fit-content;
+    flex-wrap: wrap;
+  }
+}

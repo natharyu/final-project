@@ -1,0 +1,19 @@
+@import "scss/settings";
+
+#dashboard header {
+  width: 100%;
+  min-height: 5rem;
+  background-color: var(--primary);
+  @include flex(row, space-between, center, 0.5rem);
+  padding: 0 2rem;
+  color: var(--neutral);
+  .header-left a,
+  .header-right a,
+  .header-right button {
+    font-weight: bold;
+    @include transition(0.3s);
+    &:hover {
+      color: var(--secondary);
+    }
+  }
+}

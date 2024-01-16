@@ -1,0 +1,21 @@
+@import "scss/settings";
+
+#products {
+  ul {
+    list-style: none;
+    @include flex(row, space-around, center, 0.5rem);
+    flex-wrap: wrap;
+    width: 100%;
+    a {
+      text-decoration: none;
+      color: var(--primary);
+      @include transition(0.1s);
+      text-shadow: none;
+      &:hover {
+        text-shadow: 0.3rem 0.3rem 0.3rem rgba(0, 0, 0, 0.3);
+        text-decoration: underline;
+        scale: 1.1;
+      }
+    }
+  }
+}

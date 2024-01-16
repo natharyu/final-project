@@ -1,0 +1,68 @@
+@import "scss/settings";
+
+#mobile-nav {
+  display: block;
+  @include lg {
+    display: none;
+  }
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(#b6cdbd, 0.7);
+  z-index: 10;
+  aside {
+    @include flex(column, center, normal, 0.5rem);
+    width: 100%;
+    @include sm {
+      width: 20rem;
+    }
+    height: 100%;
+    background-color: var(--primary);
+    color: var(--neutral);
+    font-size: 1.5rem;
+    font-weight: bold;
+    #closeMobileNav {
+      height: 2.5rem;
+      width: 2.5rem;
+      cursor: pointer;
+      position: absolute;
+      top: 1.5rem;
+      left: 1.5rem;
+      font-size: 2rem;
+      color: var(--neutral);
+      background-color: transparent;
+      border: none;
+      @include transition(0.3s);
+      &:hover {
+        color: var(--secondary);
+      }
+    }
+    nav {
+      @include flex(column, normal, center, 1rem);
+      a {
+        @include transition(0.3s);
+        &:hover {
+          color: var(--secondary);
+        }
+        &.active {
+          color: var(--secondary);
+        }
+      }
+      #logout {
+        cursor: pointer;
+        padding: 0.7rem;
+        color: var(--error);
+        border: 1px solid var(--error);
+        border-radius: 0.5rem;
+        background-color: var(--warning);
+        @include transition(0.3s);
+        &:hover {
+          color: var(--warning);
+          background-color: var(--error);
+        }
+      }
+    }
+  }
+}

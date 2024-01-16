@@ -1,0 +1,11 @@
+@import "scss/settings";
+
+main {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-grow: 1;
+  margin: auto;
+  padding: 2rem;
+  background-color: var(--neutral);
+}

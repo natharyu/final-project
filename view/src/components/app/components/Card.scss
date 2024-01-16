@@ -1,0 +1,55 @@
+@import "scss/settings";
+
+.card {
+  @include flex(column, space-between, center, 0.8rem);
+  width: 80%;
+  background-color: var(--base);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  @include md {
+    width: 45%;
+  }
+  @include lg {
+    width: 30%;
+  }
+  h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  img {
+    width: 80%;
+    border-radius: 1rem;
+  }
+  .card-description {
+    width: 100%;
+    @include flex(column, normal, normal, 0.5rem);
+    line-height: 1em;
+    max-height: 2em;
+    -webkit-line-clamp: 2;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    white-space: normal;
+    overflow: hidden;
+  }
+  .card-footer {
+    width: 100%;
+    font-size: 1.2rem;
+    @include flex(row, space-between, center, 0.5rem);
+    :first-child {
+      color: var(--primary);
+      font-weight: bold;
+    }
+  }
+  a {
+    cursor: pointer;
+    @include flex(row, center, center, 0.5rem);
+    border: 1px solid var(--secondary);
+    padding: 1rem 0.5rem;
+    color: var(--primary);
+    background-color: var(--secondary);
+    border-radius: 0.5rem;
+    &:hover {
+      background-color: var(--neutral);
+    }
+  }
+}

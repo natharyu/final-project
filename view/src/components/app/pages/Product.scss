@@ -1,0 +1,57 @@
+@import "scss/settings";
+
+.product {
+  height: 100%;
+  @include flex(column, space-between, center, 2rem);
+  width: 100%;
+  @include lg {
+    @include flex(row, space-between, center, 2rem);
+  }
+  img {
+    height: 80%;
+    border-radius: 0.5rem;
+  }
+  .product-details {
+    height: 80%;
+    width: 80%;
+    @include lg {
+      width: 100%;
+    }
+    @include flex(column, space-between, center, 2rem);
+    h3 {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+    .product-footer,
+    .product-action {
+      @include flex(row, space-between, center, 0.5rem);
+      width: 100%;
+    }
+    .product-footer {
+      :first-child {
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: var(--primary);
+      }
+    }
+    label input {
+      font-weight: bold;
+      margin: 0.5rem;
+      text-align: center;
+    }
+    button {
+      cursor: pointer;
+      font-size: 1.2rem;
+      border: 1px solid var(--secondary);
+      padding: 1rem 0.5rem;
+      color: var(--primary);
+      background-color: var(--secondary);
+      border-radius: 0.5rem;
+      @include transition(0.3s);
+      &:hover {
+        background-color: var(--neutral);
+        color: var(--primary);
+      }
+    }
+  }
+}

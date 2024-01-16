@@ -1,0 +1,29 @@
+@mixin transition($time, $type: ease-in-out) {
+  transition: all $time $type;
+}
+
+@mixin flex($direction: row, $justify: center, $align: center, $gap: 0rem) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+  gap: $gap;
+}
+
+@mixin sm {
+  @media (min-width: #{$mobile}) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media (min-width: #{$tablet}) and (max-width: #{$desktop - 1px}) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media (min-width: #{$desktop}) {
+    @content;
+  }
+}

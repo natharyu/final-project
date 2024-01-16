@@ -1,0 +1,13 @@
+@import "variables";
+@import "mixins";
+
+html {
+  --primary: #{$primary};
+  --secondary: #{$secondary};
+  --neutral: #{$neutral};
+  --base: #{$base};
+  --info: #{$info};
+  --error: #{$error};
+  --success: #{$success};
+  --warning: #{$warning};
+}
